@@ -1,6 +1,7 @@
 package net.chameleon.mymccourse;
 
 import com.mojang.logging.LogUtils;
+import net.chameleon.mymccourse.block.ModBlocks;
 import net.chameleon.mymccourse.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -26,6 +27,8 @@ public class MyMcCourseMod {
         IEventBus modEventBus = context.getModEventBus();
 
         ModItems.register(modEventBus);
+
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
